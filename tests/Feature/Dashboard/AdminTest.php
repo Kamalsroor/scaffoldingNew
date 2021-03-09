@@ -12,13 +12,13 @@ class AdminTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        Admin::factory()->create(['name' => 'Ahmed']);
+        Admin::factory()->create(['name' => 'Kamel']);
 
         $response = $this->get(route('dashboard.admins.index'));
 
         $response->assertSuccessful();
 
-        $response->assertSee('Ahmed');
+        $response->assertSee('Kamel');
     }
 
     /** @test */
@@ -26,13 +26,13 @@ class AdminTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        $admin = Admin::factory()->create(['name' => 'Ahmed']);
+        $admin = Admin::factory()->create(['name' => 'Kamel']);
 
         $response = $this->get(route('dashboard.admins.show', $admin));
 
         $response->assertSuccessful();
 
-        $response->assertSee('Ahmed');
+        $response->assertSee('Kamel');
     }
 
     /** @test */
@@ -125,15 +125,15 @@ class AdminTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        Admin::factory()->create(['name' => 'Ahmed']);
+        Admin::factory()->create(['name' => 'Kamel']);
 
         Admin::factory()->create(['name' => 'Mohamed']);
 
         $this->get(route('dashboard.admins.index', [
-            'name' => 'ahmed',
+            'name' => 'kamal',
         ]))
             ->assertSuccessful()
-            ->assertSee('Ahmed')
+            ->assertSee('Kamel')
             ->assertDontSee('Mohamed');
     }
 

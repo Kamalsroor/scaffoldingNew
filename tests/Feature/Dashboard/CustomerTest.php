@@ -12,13 +12,13 @@ class CustomerTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        Customer::factory()->create(['name' => 'Ahmed']);
+        Customer::factory()->create(['name' => 'Kamel']);
 
         $response = $this->get(route('dashboard.customers.index'));
 
         $response->assertSuccessful();
 
-        $response->assertSee('Ahmed');
+        $response->assertSee('Kamel');
     }
 
     /** @test */
@@ -26,13 +26,13 @@ class CustomerTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        $customer = Customer::factory()->create(['name' => 'Ahmed']);
+        $customer = Customer::factory()->create(['name' => 'Kamel']);
 
         $response = $this->get(route('dashboard.customers.show', $customer));
 
         $response->assertSuccessful();
 
-        $response->assertSee('Ahmed');
+        $response->assertSee('Kamel');
     }
 
     /** @test */
@@ -125,15 +125,15 @@ class CustomerTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        Customer::factory()->create(['name' => 'Ahmed']);
+        Customer::factory()->create(['name' => 'Kamel']);
 
         Customer::factory()->create(['name' => 'Mohamed']);
 
         $this->get(route('dashboard.customers.index', [
-            'name' => 'ahmed',
+            'name' => 'kamal',
         ]))
             ->assertSuccessful()
-            ->assertSee('Ahmed')
+            ->assertSee('Kamel')
             ->assertDontSee('Mohamed');
     }
 

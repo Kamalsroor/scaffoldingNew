@@ -53,7 +53,7 @@ class LoginTest extends TestCase
             $mock->shouldReceive('accessToken')->with('dummy token')->andReturnSelf();
             $mock->shouldReceive('getPhoneNumber')->andReturns('123456789');
             $mock->shouldReceive('getEmail')->andReturns('demo@demo.com');
-            $mock->shouldReceive('getName')->andReturns('Ahmed');
+            $mock->shouldReceive('getName')->andReturns('kamal');
             $mock->shouldReceive('getFirebaseId')->andReturns(123);
         });
 
@@ -73,7 +73,7 @@ class LoginTest extends TestCase
         $this->assertEquals($user->phone, '123456789');
         $this->assertEquals($user->phone, '123456789');
         $this->assertEquals($user->email, 'demo@demo.com');
-        $this->assertEquals($user->name, 'Ahmed');
+        $this->assertEquals($user->name, 'kamal');
         $this->assertEquals($user->firebase_id, 123);
     }
 }

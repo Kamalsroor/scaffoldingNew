@@ -12,13 +12,13 @@ class SupervisorTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        Supervisor::factory()->create(['name' => 'Ahmed']);
+        Supervisor::factory()->create(['name' => 'Kamel']);
 
         $response = $this->get(route('dashboard.supervisors.index'));
 
         $response->assertSuccessful();
 
-        $response->assertSee('Ahmed');
+        $response->assertSee('Kamel');
     }
 
     /** @test */
@@ -26,13 +26,13 @@ class SupervisorTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        $supervisor = Supervisor::factory()->create(['name' => 'Ahmed']);
+        $supervisor = Supervisor::factory()->create(['name' => 'Kamel']);
 
         $response = $this->get(route('dashboard.supervisors.show', $supervisor));
 
         $response->assertSuccessful();
 
-        $response->assertSee('Ahmed');
+        $response->assertSee('Kamel');
     }
 
     /** @test */
@@ -129,15 +129,15 @@ class SupervisorTest extends TestCase
     {
         $this->actingAsAdmin();
 
-        Supervisor::factory()->create(['name' => 'Ahmed']);
+        Supervisor::factory()->create(['name' => 'Kamel']);
 
         Supervisor::factory()->create(['name' => 'Mohamed']);
 
         $this->get(route('dashboard.supervisors.index', [
-            'name' => 'ahmed',
+            'name' => 'kamal',
         ]))
             ->assertSuccessful()
-            ->assertSee('Ahmed')
+            ->assertSee('Kamel')
             ->assertDontSee('Mohamed');
     }
 
