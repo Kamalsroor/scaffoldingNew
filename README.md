@@ -12,7 +12,7 @@ Otherwise, you should configure your environment manually by the following steps
 
 - Clone the project to your local server using the following command:
     ```bash
-    git clone https://github.com/laravel-modules/scaffolding.git my-app
+    git clone https://github.com/Kamalsroor/scaffoldingNew.git my-app
     ```
 
 - Go to the project path and configure your environment:
