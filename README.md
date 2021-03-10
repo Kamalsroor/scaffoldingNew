@@ -5,7 +5,7 @@ The laravel scaffolding of our projects.
 If you use valet just execute the `init.sh` file to configure your environment automatically.
 ```bash
 git clone https://github.com/Kamalsroor/scaffoldingNew.git appName
-cd my-app
+cd appName
 bash ./init.sh
 ```
 Otherwise, you should configure your environment manually by the following steps:
@@ -18,7 +18,7 @@ Otherwise, you should configure your environment manually by the following steps
 - Go to the project path and configure your environment:
     - Copy the `.env.example` file to `.env`:
         ```bash
-        cd ./project
+        cd ./appName
     
         cp .env.example .env
         ```
