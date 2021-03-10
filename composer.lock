@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "122f3886f79fe4ac14275a097c0a1a9a",
+    "content-hash": "731c95e8922a391b49c1ba4851504193",
     "packages": [
         {
             "name": "ahmed-aliraqi/laravel-media-uploader",
@@ -1904,56 +1904,6 @@
                 "source": "https://github.com/Intervention/image/tree/master"
             },
             "time": "2019-11-02T09:15:47+00:00"
-        },
-        {
-            "name": "kamalsroor/crud-generator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Kamalsroor/crud-generator.git",
-                "reference": "ca0e5163696efd0e271590dcab93cbed856f948c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Kamalsroor/crud-generator/zipball/ca0e5163696efd0e271590dcab93cbed856f948c",
-                "reference": "ca0e5163696efd0e271590dcab93cbed856f948c",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "^6.0|^7.0|^8.0",
-                "illuminate/support": "^6.0|^7.0|^8.0",
-                "php": "^7.4"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "KamalSroor\\CrudGenerator\\CrudServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "KamalSroor\\CrudGenerator\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kamal Sroor",
-                    "email": "kamal.s.sroor@gmail.com"
-                }
-            ],
-            "description": "This package is a useful tool to generate simple crud for laravel-modules/scaffolding",
-            "support": {
-                "issues": "https://github.com/Kamalsroor/crud-generator/issues",
-                "source": "https://github.com/Kamalsroor/crud-generator/tree/master"
-            },
-            "time": "2021-03-09T23:35:54+00:00"
         },
         {
             "name": "kreait/clock",
@@ -9248,6 +9198,55 @@
             "time": "2020-05-27T16:41:55+00:00"
         },
         {
+            "name": "kamalsroor/crud-generator",
+            "version": "V1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kamalsroor/crud-generator.git",
+                "reference": "ca0e5163696efd0e271590dcab93cbed856f948c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kamalsroor/crud-generator/zipball/ca0e5163696efd0e271590dcab93cbed856f948c",
+                "reference": "ca0e5163696efd0e271590dcab93cbed856f948c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "KamalSroor\\CrudGenerator\\CrudServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "KamalSroor\\CrudGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kamal Sroor",
+                    "email": "kamal.s.sroor@gmail.com"
+                }
+            ],
+            "description": "This package is a useful tool to generate simple crud for laravel-modules/scaffolding",
+            "support": {
+                "issues": "https://github.com/Kamalsroor/crud-generator/issues",
+                "source": "https://github.com/Kamalsroor/crud-generator/tree/V1.0.0"
+            },
+            "time": "2021-03-09T23:35:54+00:00"
+        },
+        {
             "name": "laraeast/laravel-vue-i18n-generator",
             "version": "v1.0.0",
             "source": {
@@ -11906,9 +11905,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "kamalsroor/crud-generator": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
