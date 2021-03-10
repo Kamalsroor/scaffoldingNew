@@ -29,7 +29,7 @@ DB_PASSWORD=$(ask_secure_question "Enter The Database Password" "")
 echo " "
 
 # Create the mysql database.
-mysql -u root --password=$DB_PASSWORD -e "create database $DB_DATABASE CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+mysql -u $DB_USERNAME --password=$DB_PASSWORD -e "create database $DB_DATABASE CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
 
 # Create the project's .env file.
 sed -e "s|DB_DATABASE=laravel|DB_DATABASE=$DB_DATABASE|"\
