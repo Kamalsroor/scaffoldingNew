@@ -1,0 +1,23 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "L5 Swagger UI",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/categories": {
+            "get": {
+                "summary": "Display a listing of the categories.",
+                "operationId": "App\\Http\\Controllers\\Api\\CategoryController::index",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of projects."
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

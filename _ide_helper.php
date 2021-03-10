@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.31.0.
+ * Generated for Laravel 8.32.1.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14996,6 +14996,28 @@
      
 }
 
+    namespace L5Swagger { 
+            /**
+     * 
+     *
+     */ 
+        class L5SwaggerFacade {
+                    /**
+         * 
+         *
+         * @throws L5SwaggerException
+         * @static 
+         */ 
+        public static function generateDocs()
+        {
+                        /** @var \L5Swagger\Generator $instance */
+                        return $instance->generateDocs();
+        }
+         
+    }
+     
+}
+
     namespace Diglactic\Breadcrumbs { 
             /**
      * Breadcrumbs facade - allows easy access to the Manager instance.
@@ -20525,6 +20547,7 @@ namespace  {
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
             class Debugbar extends \Barryvdh\Debugbar\Facade {}
+            class L5Swagger extends \L5Swagger\L5SwaggerFacade {}
             class Breadcrumbs extends \Diglactic\Breadcrumbs\Breadcrumbs {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
             class Image extends \Intervention\Image\Facades\Image {}

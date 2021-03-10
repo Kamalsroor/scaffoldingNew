@@ -15,7 +15,10 @@ class CategoryController extends Controller
 
     /**
      * Display a listing of the categories.
-     *
+     * @OA\Get(
+     *     path="/api/categories",
+     *     @OA\Response(response="200", description="Display a listing of projects.")
+     * )
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()

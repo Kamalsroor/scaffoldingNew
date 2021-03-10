@@ -26,8 +26,8 @@ class ProfileTest extends TestCase
     public function only_to_authenticated_user_can_update_his_profile()
     {
         $user = User::factory()->create([
-            'name' => 'Ahmed',
-            'email' => 'ahmed@demo.com',
+            'name' => 'Kamal',
+            'email' => 'kamal@demo.com',
             'phone' => '123456789',
         ]);
 
