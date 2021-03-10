@@ -73,6 +73,8 @@
 window.onload = function() {
   // Build a system
   const ui = SwaggerUIBundle({
+    // url: url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + "/swagger/swagger.json",
+
     dom_id: '#swagger-ui',
 
     url: "{!! $urlToDocs !!}",
