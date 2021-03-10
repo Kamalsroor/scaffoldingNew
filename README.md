@@ -4,7 +4,7 @@ The laravel scaffolding of our projects.
 ## Deploying To Local Server
 If you use valet just execute the `init.sh` file to configure your environment automatically.
 ```bash
-git clone https://github.com/laravel-modules/scaffolding.git my-app
+git clone https://github.com/Kamalsroor/scaffoldingNew.git my-app
 cd my-app
 bash ./init.sh
 ```
