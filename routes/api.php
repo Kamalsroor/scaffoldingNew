@@ -36,4 +36,6 @@ Route::get('/settings/pages/{page}', 'SettingController@page')
 Route::post('feedback', 'FeedbackController@store')->name('feedback.send');
 Route::apiResource('categories', 'CategoryController');
 Route::get('/select/categories', 'CategoryController@select')->name('categories.select');
+Route::apiResource('cities', 'CityController');
+Route::get('/select/cities', 'CityController@select')->name('cities.select');
 /*  The routes of generated crud will set here: Don't remove this line  */

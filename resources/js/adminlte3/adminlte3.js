@@ -77,6 +77,14 @@ CheckAll.onChange(function (el) {
         $(el).closest('.has-treeview').addClass('menu-open');
     });
 
+
+    $(".export-btn").on("click", function(){
+        $( this ).addClass('disabled');
+        setTimeout(() => {
+            $( this ).removeClass('disabled');
+        }, 35000);
+    });
+
 })(jQuery);
 
 $(function () {

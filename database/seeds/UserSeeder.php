@@ -14,6 +14,13 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        Customer::factory()->count(20)->create();
+
+        // $this->command->getOutput()->progressStart(5000);
+        // for ($i = 0; $i < 5000; $i++) {
+        //     // sleep(1);
+        //     Customer::factory()->count(1)->create();
+        //     $this->command->getOutput()->progressAdvance();
+        // }
+        // $this->command->getOutput()->progressFinish();
     }
 }

@@ -22,6 +22,11 @@ Route::delete('delete', 'DeleteController@destroy')->name('delete.selected');
 Route::delete('forceDelete', 'DeleteController@forceDelete')->name('forceDelete.selected');
 Route::delete('restore', 'DeleteController@restore')->name('restore.selected');
 
+// Select All Routes.
+Route::get('export', 'ExcelController@export')->name('excel.export');
+Route::post('import', 'ExcelController@import')->name('excel.import');
+
+
 // Customers Routes.
 Route::get('trashed/customers', 'CustomerController@trashed')->name('customers.trashed');
 Route::get('trashed/customers/{trashed_customer}', 'CustomerController@showTrashed')->name('customers.trashed.show');
@@ -59,5 +64,7 @@ Route::resource('feedback', 'FeedbackController')->only('index', 'show', 'destro
         Route::post('categories/{trashed_category}/restore', 'CategoryController@restore')->name('categories.restore');
         Route::delete('categories/{trashed_category}/forceDelete', 'CategoryController@forceDelete')->name('categories.forceDelete');
         Route::resource('categories', 'CategoryController');
+
 /*  The routes of generated crud will set here: Don't remove this line  */
-        
+
+

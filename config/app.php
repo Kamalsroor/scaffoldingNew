@@ -166,7 +166,7 @@ return [
         * Package Service Providers...
         */
         L5Swagger\L5SwaggerServiceProvider::class,
-
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -178,6 +178,7 @@ return [
         App\Providers\SettingsServiceProvider::class,
         App\Providers\LayoutsServiceProvider::class,
         App\Providers\SoftDeletesServiceProvider::class,
+        App\Providers\ExcelMacroServiceProvider::class,
 
     ],
 
@@ -229,7 +230,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

@@ -41,6 +41,20 @@ if (! function_exists('app_logo')) {
     }
 }
 
+if (! function_exists('array_unset_by_value')) {
+    /**
+     * unset value from array .
+     *
+     * @return string
+     */
+    function array_unset_by_value($array , $value )
+    {
+        if (($key = array_search($value, $array)) !== false) {
+            unset($array[$key]);
+        }
+    }
+}
+
 if (! function_exists('app_favicon')) {
     /**
      * Get the application favicon url.

@@ -14,6 +14,16 @@
                     <x-check-all-delete
                             type="{{ \App\Models\Customer::class }}"
                             :resource="trans('customers.plural')"></x-check-all-delete>
+                    <x-import-excel
+                            model="{{ \App\Models\Customer::class }}"
+                            import="{{ \App\Imports\CustomersImport::class }}"
+                            :resource="trans('customers.plural')"></x-import-excel>
+                    <x-export-excel
+                            model="{{ \App\Models\Customer::class }}"
+                            export="{{ \App\Exports\Export::class }}"
+                            resource="{{ App\Http\Resources\CustomerResource::class }}"
+                            fileName="Customers"
+                            ></x-export-excel>
 
                     <div class="ml-2 d-flex justify-content-between flex-grow-1">
                         @include('dashboard.accounts.customers.partials.actions.create')

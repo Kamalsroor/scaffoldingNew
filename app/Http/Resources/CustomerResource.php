@@ -16,6 +16,13 @@ class CustomerResource extends JsonResource
      */
     public function toArray($request)
     {
+        if ($request->example_excel) {
+            return [
+                'name' => $this->name,
+                'email' => $this->email,
+                'phone' => $this->phone,
+            ];
+        }
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -24,8 +31,8 @@ class CustomerResource extends JsonResource
             'type' => $this->type,
             'avatar' => $this->getAvatar(),
             'localed_type' => $this->present()->type,
-            'created_at' => $this->created_at->toDateTimeString(),
-            'created_at_formatted' => $this->created_at->diffForHumans(),
+            'created_at' => $this->created_at ? $this->created_at->toDateTimeString() : null,
+            'created_at_formatted' =>  $this->created_at ? $this->created_at->diffForHumans() : null,
         ];
     }
 }

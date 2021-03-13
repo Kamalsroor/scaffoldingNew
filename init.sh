@@ -49,5 +49,8 @@ php artisan storage:link
 # Migrate the tables and seed accounts and dummy data.
 php artisan migrate:fresh --seed
 
+# generate the swagger api doc
+php artisan l5-swagger:generate
+
 # Print the project's URL.
 echo APP_URL: http://$APP_DOMAIN
