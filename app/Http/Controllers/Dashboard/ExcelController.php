@@ -8,9 +8,10 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\Excel\ImportRequest;
 use Maatwebsite\Excel\Facades\Excel;
 use Carbon\Carbon;
-use App\Imports\CustomersImport;
 use Illuminate\Support\Facades\Validator;
 use App\Jobs\SaveExcelImportingJob;
+use Illuminate\Support\Arr;
+
 class ExcelController extends Controller
 {
     /**
@@ -43,10 +44,20 @@ class ExcelController extends Controller
 
                     // Check validation success
                     if ($validator->passes()) {
-                        $datas = array_chunk($request->data , 10);
-                        foreach ($datas as $key => $data) {
-                            dispatch(new SaveExcelImportingJob($data ,$modelClass ));
+                        if (count($request->data) > 50) {
+                            $datas = array_chunk($request->data , 10);
+                            foreach ($datas as $key => $data) {
+                                dispatch(new SaveExcelImportingJob($data ,$modelClass ));
+                            }
+                        }else{
+                            foreach ($request->data as $key => $value) {
+                                $modelClass::create(Arr::except($value , ['created_at' , 'id' , 'created_at_formatted' , 'avatar']));
+                            }
                         }
+
+
+
+
                     }
                 }
             }
