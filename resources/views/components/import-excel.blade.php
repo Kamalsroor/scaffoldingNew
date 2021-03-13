@@ -29,7 +29,7 @@
                 <x-export-excel-example
                 model="{{ $model ?? '' }}"
                 export="{{ \App\Exports\Export::class }}"
-                resource="{{ $exportResource }}"
+                resource="{{ $exportResource ?? '' }}"
                 fileName="{{ $resource ?? '' }}"
                 ></x-export-excel-example>
 

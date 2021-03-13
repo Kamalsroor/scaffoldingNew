@@ -38,4 +38,7 @@ Route::apiResource('categories', 'CategoryController');
 Route::get('/select/categories', 'CategoryController@select')->name('categories.select');
 Route::apiResource('cities', 'CityController');
 Route::get('/select/cities', 'CityController@select')->name('cities.select');
+Route::apiResource('roles', 'RoleController');
+Route::get('/select/roles', 'RoleController@select')->name('roles.select');
+
 /*  The routes of generated crud will set here: Don't remove this line  */

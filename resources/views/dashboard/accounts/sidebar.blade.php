@@ -25,6 +25,12 @@
                 'can' => ['ability' => 'viewAny', 'model' => \App\Models\Customer::class],
                 'active' => request()->routeIs('*customers*'),
             ],
+            [
+                'name' => trans('roles.plural'),
+                'url' => route('dashboard.roles.index'),
+                'can' => ['ability' => 'viewAny', 'model' => \App\Models\Role::class],
+                'active' => request()->routeIs('*roles*')
+            ],
         ])
     @endcomponent
 @endif

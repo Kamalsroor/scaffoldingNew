@@ -65,6 +65,16 @@ Route::resource('feedback', 'FeedbackController')->only('index', 'show', 'destro
         Route::delete('categories/{trashed_category}/forceDelete', 'CategoryController@forceDelete')->name('categories.forceDelete');
         Route::resource('categories', 'CategoryController');
 
+
+        Route::get('trashed/roles', 'RoleController@trashed')->name('roles.trashed');
+        Route::get('trashed/roles/{trashed_role}', 'RoleController@showTrashed')->name('roles.trashed.show');
+        Route::post('roles/{trashed_role}/restore', 'RoleController@restore')->name('roles.restore');
+        Route::delete('roles/{trashed_role}/forceDelete', 'RoleController@forceDelete')->name('roles.forceDelete');
+        Route::resource('roles', 'RoleController');
+
+
 /*  The routes of generated crud will set here: Don't remove this line  */
+
+
 
 

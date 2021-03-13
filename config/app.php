@@ -167,6 +167,8 @@ return [
         */
         L5Swagger\L5SwaggerServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+
         /*
          * Application Service Providers...
          */

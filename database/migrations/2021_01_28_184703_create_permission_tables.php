@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Str;
 
 class CreatePermissionTables extends Migration
 {
@@ -15,6 +16,7 @@ class CreatePermissionTables extends Migration
     {
         $tableNames = config('permission.table_names');
         $columnNames = config('permission.column_names');
+
 
         if (empty($tableNames)) {
             throw new \Exception('Error: config/permission.php not loaded. Run [php artisan config:clear] and try again.');
@@ -31,11 +33,20 @@ class CreatePermissionTables extends Migration
 
         Schema::create($tableNames['roles'], function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            // $table->string('name');
             $table->string('guard_name');
             $table->timestamps();
+            // $table->unique([ 'guard_name']);
+            $table->softDeletes();
+        });
 
-            $table->unique(['name', 'guard_name']);
+        Schema::create(Str::of($tableNames['roles'])->snake()->singular()->lower().'_translations', function (Blueprint $table) use($tableNames) {
+            $table->id();
+            $table->foreignId(Str::of($tableNames['roles'])->snake()->singular()->lower().'_id');
+            $table->string('name')->nullable();
+            $table->string('locale')->index();
+            $table->unique([Str::of($tableNames['roles'])->snake()->singular()->lower().'_id', 'locale']);
+            $table->foreign(Str::of($tableNames['roles'])->snake()->singular()->lower().'_id')->references('id')->on($tableNames['roles'])->cascadeOnDelete();
         });
 
         Schema::create($tableNames['model_has_permissions'], function (Blueprint $table) use ($tableNames, $columnNames) {
