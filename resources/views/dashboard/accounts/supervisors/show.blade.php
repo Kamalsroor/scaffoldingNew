@@ -28,7 +28,18 @@
                              class="img img-size-64"
                              alt="{{ $supervisor->name }}">
                     @endif
+
+
                 </td>
+            </tr>
+            <tr>
+                <th width="200">@lang('roles.plural')</th>
+                <td>
+                    @foreach($supervisor->roles as $role)
+                    <h4><span class="badge badge-pill bg-info">{{$role->name}}</span></h4>
+                    @endforeach
+                </td>
+
             </tr>
             </tbody>
         </table>

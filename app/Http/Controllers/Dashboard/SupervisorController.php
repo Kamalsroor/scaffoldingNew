@@ -50,12 +50,14 @@ class SupervisorController extends Controller
      */
     public function store(SupervisorRequest $request)
     {
+
         $supervisor = Supervisor::create($request->allWithHashedPassword());
 
         $supervisor->setType($request->type);
 
         if ($request->user()->isAdmin()) {
             $supervisor->syncPermissions($request->input('permissions', []));
+            $supervisor->assignRole($request->input('role',[]));
         }
 
         $supervisor->addAllMediaFromTokens();
@@ -102,6 +104,7 @@ class SupervisorController extends Controller
 
         if ($request->user()->isAdmin()) {
             $supervisor->syncPermissions($request->input('permissions', []));
+            $supervisor->syncRoles($request->input('role' , []));
         }
 
         $supervisor->addAllMediaFromTokens();
