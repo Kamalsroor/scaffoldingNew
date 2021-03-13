@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcb63bbf6c88a746591559bed86d90bd",
+    "content-hash": "3f6858ebba4d0aafc4bf0c33de2ddc61",
     "packages": [
         {
             "name": "ahmed-aliraqi/laravel-media-uploader",
@@ -1961,16 +1961,16 @@
         },
         {
             "name": "kamalsroor/crud-generator",
-            "version": "V1.0.5",
+            "version": "V1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Kamalsroor/crud-generator.git",
-                "reference": "cb4f01661cc2985a6adabe70a11c594e24f8df06"
+                "reference": "2405bb60084ac89d8cc33656b7151d9deeaa9756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Kamalsroor/crud-generator/zipball/cb4f01661cc2985a6adabe70a11c594e24f8df06",
-                "reference": "cb4f01661cc2985a6adabe70a11c594e24f8df06",
+                "url": "https://api.github.com/repos/Kamalsroor/crud-generator/zipball/2405bb60084ac89d8cc33656b7151d9deeaa9756",
+                "reference": "2405bb60084ac89d8cc33656b7151d9deeaa9756",
                 "shasum": ""
             },
             "require": {
@@ -2004,9 +2004,9 @@
             "description": "This package is a useful tool to generate simple crud for Kamalsroor/scaffoldingNew",
             "support": {
                 "issues": "https://github.com/Kamalsroor/crud-generator/issues",
-                "source": "https://github.com/Kamalsroor/crud-generator/tree/V1.0.5"
+                "source": "https://github.com/Kamalsroor/crud-generator/tree/V1.0.7"
             },
-            "time": "2021-03-13T15:19:32+00:00"
+            "time": "2021-03-13T18:04:52+00:00"
         },
         {
             "name": "kreait/clock",
