@@ -17579,6 +17579,288 @@
      
 }
 
+    namespace Qoraiche\MailEclipse\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class MailEclipse {
+                    /**
+         * 
+         *
+         * @return array 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function getMailables()
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getMailables();
+        }
+                    /**
+         * 
+         *
+         * @param $key
+         * @param $name
+         * @return \Qoraiche\MailEclipse\Collection 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function getMailable($key, $name)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getMailable($key, $name);
+        }
+                    /**
+         * 
+         *
+         * @param $templateSlug
+         * @return bool 
+         * @static 
+         */ 
+        public static function deleteTemplate($templateSlug)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::deleteTemplate($templateSlug);
+        }
+                    /**
+         * 
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getTemplatesFile()
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getTemplatesFile();
+        }
+                    /**
+         * Save templates to templates.json file.
+         *
+         * @param \Qoraiche\MailEclipse\Collection $templates
+         * @static 
+         */ 
+        public static function saveTemplates($templates)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::saveTemplates($templates);
+        }
+                    /**
+         * 
+         *
+         * @param $request
+         * @return \Qoraiche\MailEclipse\JsonResponse|null 
+         * @static 
+         */ 
+        public static function updateTemplate($request)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::updateTemplate($request);
+        }
+                    /**
+         * 
+         *
+         * @param $templateSlug
+         * @return \Qoraiche\MailEclipse\Collection|null 
+         * @static 
+         */ 
+        public static function getTemplate($templateSlug)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getTemplate($templateSlug);
+        }
+                    /**
+         * Get templates collection.
+         *
+         * @return \Qoraiche\MailEclipse\Collection 
+         * @static 
+         */ 
+        public static function getTemplates()
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getTemplates();
+        }
+                    /**
+         * 
+         *
+         * @param $request
+         * @return \Qoraiche\MailEclipse\JsonResponse 
+         * @static 
+         */ 
+        public static function createTemplate($request)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::createTemplate($request);
+        }
+                    /**
+         * 
+         *
+         * @return \Qoraiche\MailEclipse\Collection 
+         * @static 
+         */ 
+        public static function getTemplateSkeletons()
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getTemplateSkeletons();
+        }
+                    /**
+         * 
+         *
+         * @param $type
+         * @param $name
+         * @param $skeleton
+         * @return array 
+         * @static 
+         */ 
+        public static function getTemplateSkeleton($type, $name, $skeleton)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getTemplateSkeleton($type, $name, $skeleton);
+        }
+                    /**
+         * Markdowned template view.
+         *
+         * @static 
+         */ 
+        public static function markdownedTemplateToView($save = true, $content = '', $viewPath = '', $template = false)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::markdownedTemplateToView($save, $content, $viewPath, $template);
+        }
+                    /**
+         * 
+         *
+         * @param $simpleview
+         * @param $content
+         * @param $viewName
+         * @param bool $template
+         * @param null $namespace
+         * @return bool|string|void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function previewMarkdownViewContent($simpleview, $content, $viewName, $template = false, $namespace = null)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::previewMarkdownViewContent($simpleview, $content, $viewName, $template, $namespace);
+        }
+                    /**
+         * 
+         *
+         * @param $instance
+         * @param $view
+         * @return string|void 
+         * @static 
+         */ 
+        public static function previewMarkdownHtml($instance, $view)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::previewMarkdownHtml($instance, $view);
+        }
+                    /**
+         * 
+         *
+         * @param $mailableName
+         * @return array|bool 
+         * @static 
+         */ 
+        public static function getMailableTemplateData($mailableName)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::getMailableTemplateData($mailableName);
+        }
+                    /**
+         * 
+         *
+         * @param null $request
+         * @return \Qoraiche\MailEclipse\JsonResponse 
+         * @static 
+         */ 
+        public static function generateMailable($request = null)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::generateMailable($request);
+        }
+                    /**
+         * Handle Mailable Constructor arguments and pass the fake ones.
+         *
+         * @param $mailable
+         * @return object|void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function handleMailableViewDataArgs($mailable)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::handleMailableViewDataArgs($mailable);
+        }
+                    /**
+         * 
+         *
+         * @param $instance
+         * @param string $type
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Container\BindingResolutionException
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function buildMailable($instance, $type = 'call')
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::buildMailable($instance, $type);
+        }
+                    /**
+         * 
+         *
+         * @param $simpleview
+         * @param $view
+         * @param bool $template
+         * @param null $instance
+         * @return string|void 
+         * @throws \Illuminate\Contracts\Container\BindingResolutionException
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function renderPreview($simpleview, $view, $template = false, $instance = null)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::renderPreview($simpleview, $view, $template, $instance);
+        }
+                    /**
+         * Class name has to satisfy those rules.
+         * 
+         * https://www.php.net/manual/en/language.oop5.basic.php#language.oop5.basic.class
+         * https://www.php.net/manual/en/reserved.keywords.php
+         *
+         * @param $input
+         * @return string|false class name or false on failure
+         * @static 
+         */ 
+        public static function generateClassName($input)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::generateClassName($input);
+        }
+                    /**
+         * 
+         *
+         * @param string $name
+         * @return bool|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function renderMailable($name)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::renderMailable($name);
+        }
+                    /**
+         * 
+         *
+         * @param string $name
+         * @param string $recipient
+         * @static 
+         */ 
+        public static function sendTest($name, $recipient)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::sendTest($name, $recipient);
+        }
+                    /**
+         * 
+         *
+         * @param $mailable
+         * @param string $email
+         * @return mixed 
+         * @static 
+         */ 
+        public static function setMailableSendTestRecipient($mailable, $email)
+        {
+                        return \Qoraiche\MailEclipse\MailEclipse::setMailableSendTestRecipient($mailable, $email);
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -20894,6 +21176,7 @@ namespace  {
             class Settings extends \Laraeast\LaravelSettings\Facades\Settings {}
             class Form extends \Collective\Html\FormFacade {}
             class Html extends \Collective\Html\HtmlFacade {}
+            class MailEclipse extends \Qoraiche\MailEclipse\Facades\MailEclipse {}
      
 }
 
