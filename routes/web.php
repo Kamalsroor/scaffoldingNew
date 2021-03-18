@@ -21,5 +21,9 @@ Route::middleware('dashboard.locales')->group(function () {
 Route::impersonate();
 
 Route::get('/', function () {
+    dd(Request()->all());
     return view('welcome');
 });
+
+
+//kamalsroor
