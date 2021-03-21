@@ -78,7 +78,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <div class="dropdown-menu dropdown-menu-right p-0">
                     @foreach(Locales::get() as $locale)
-                        <a href="{{ route('dashboard.locale', $locale->code) }}"
+                        <a href="{{ route('locale', $locale->code) }}"
                            class="dropdown-item {{ app()->getLocale() == $locale->code ? 'active' : '' }}">
                             <img src="{{ $locale->flag }}" alt="{{ $locale->name }}" class="mr-2">
                             {{ $locale->name }}

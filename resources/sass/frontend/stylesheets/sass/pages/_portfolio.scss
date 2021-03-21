@@ -1,0 +1,165 @@
+/*==========
+    portfolio
+==========*/
+.portfolio {
+  padding: 3rem 0;
+  &__heading  {
+      padding: 2rem 0;
+        text-align: center;
+        a {
+            display: inline-block;
+            @include font(
+                $size: 1rem,
+                $weight: bold,
+                $transform: capitalize,
+                $family: 'Times New Roman',
+            );
+            box-shadow: 0px 7px 6px #00000029;
+            border-radius: 25px;
+            padding: .5rem 1rem;
+            border: 1px solid get-color(secondary);
+            color: get-color(primary);
+            margin: 0 .5rem;
+            &.active {
+                background: get-color(primary);
+                color: get-color(light);
+                border: 1px solid get-color(primary);
+            }
+        }
+  }
+  &__cards {
+      padding-top: 2rem;
+      @include largeScreen {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+      &__item {
+          padding: 2rem 1rem;
+          @include largeScreen {
+              width: calc(100% / 3);
+              padding: 1rem 1rem;
+          }
+          
+          &__box {
+              height: 300px;
+              position: relative;
+              display: block;
+              $self: &;
+              transition: .5s;
+              @include largeScreen {
+                  height: 350px;
+              }
+              &:hover {
+                  #{$self}__content {
+                      transition: .5s;
+                      transform: scale(1);
+                      opacity: 1;
+                  }
+              }
+              &__img {
+                  height: 100%;
+                  img {
+                      height: 100%;
+                      width: 100%;
+                  }
+              }
+              &__content {
+                    opacity: 0;
+                    transform: scale(.5);
+
+                    transition: .5s;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(get-color(primary), .8);
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    span.pro-name {
+                        display: block;
+                        @include font(
+                            $transform: capitalize,
+                            $family: 'Times New Roman',
+                            $weight: bold,
+                            $size: 1.2rem,
+                        );
+                        color: get-color(light);
+                    }
+
+                    span.shape {
+                        width: 100%;
+
+                        position: relative;
+                        margin: 1rem 0;
+                        span {
+                            width: 35px;
+                            height: 35px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: .5rem auto;
+                            border: 2px solid get-color(secondary);
+                            border-radius: 50%;
+                            svg {
+                                font-size: 1.2rem;
+                                color: get-color(light);
+                            }
+                        }
+                        
+                       
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 23px;
+                            left: 0;
+                            height: 2px;
+                            background: get-color(secondary);
+                            display: block;
+                            width: 40%;
+                        }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 23px;
+                            right: 0;
+                            height: 2px;
+                            background: get-color(secondary);
+                            display: block;
+                            width: 40%;
+                        }
+
+                    }
+
+                    span.company-name {
+                        display: block;
+                        @include font(
+                            $transform: capitalize,
+                            $family: 'Times New Roman',
+                            $weight: bold,
+                            $size: 1.2rem,
+                        );
+                        color: get-color(light);
+                    }
+                  
+              }
+          }
+      }
+      .load-projects {
+          button {
+              color: get-color(light);
+              border: 2px solid get-color(primary);
+              &::before {
+                background: get-color(primary);
+              }
+              &:hover {
+                color: get-color(primary);
+              }
+          }
+      }
+  }
+}

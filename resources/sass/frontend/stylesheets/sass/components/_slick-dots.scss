@@ -1,0 +1,26 @@
+.slick-dots {
+    bottom: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 2rem;
+    li {
+        width: auto;
+        height: auto;
+        margin: 0 4px;
+        &.slick-active {
+            button {
+                background: get-color(light-error);
+            }
+        }
+        button {
+            background: get-color(dark);
+            width: 13px;
+            height: 3px;
+            padding: 0;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+/*==========
+    Import abstract files
+==========*/
+
+@import 'sass/abstract/variables';
+@import 'sass/abstract/mixins';
+@import 'sass/abstract/functions';
+@import 'sass/abstract/placeholders';
+
+/*==========
+    Import base files
+==========*/
+
+@import 'sass/base/typegraphy';
+@import 'sass/base/animations';
+@import 'sass/base/base';
+@import 'sass/base/reset';
+
+/*==========
+    Import components files
+==========*/
+
+@import 'sass/components/buttons';
+@import 'sass/components/dropdown';
+@import 'sass/components/sidebar';
+@import 'sass/components/slick-dots';
+@import 'sass/components/modal';
+@import 'sass/components/preload';
+@import 'sass/components/contact-us';
+@import 'sass/components/search-box';
+@import 'sass/components/social-media';
+@import 'sass/components/add-comment';
+@import 'sass/components/head';
+@import 'sass/components/custom-header';
+
+
+/*==========
+    Import layout files
+==========*/
+
+@import 'sass/layout/navbar';
+@import 'sass/layout/footer';
+
+/*==========
+    Import pages files
+==========*/
+
+@import 'sass/pages/home';
+@import 'sass/pages/register-login';
+@import 'sass/pages/about';
+@import 'sass/pages/services';
+@import 'sass/pages/portfolio';
+@import 'sass/pages/contact';
+@import 'sass/pages/search';
+@import 'sass/pages/profile';
+

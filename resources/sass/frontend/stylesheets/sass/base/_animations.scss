@@ -1,0 +1,130 @@
+/*=============
+    fixed navbar
+==============*/
+@keyframes fixed-navbar {
+    from {
+        top: -60px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+/*=============
+    show sidebar
+==============*/
+@keyframes show-sidebar {
+    from {
+        #{$end}: -100%;
+    }
+    to {
+        #{$end}: 0px;
+    }
+}
+
+/*=============
+    hide sidebar
+==============*/
+@keyframes hide-sidebar {
+    from {
+        #{$end}: 0;
+    }
+    to {
+        #{$end}: -100%;
+    }
+}
+
+/*=============
+    show theme-box
+==============*/
+@keyframes show-theme-box {
+    from {
+        #{$end}: -120px;
+    }
+    to {
+        #{$end}: 0px;
+    }
+}
+
+/*=============
+    hide theme-box
+==============*/
+@keyframes hide-theme-box {
+    from {
+        #{$end}: 0;
+    }
+    to {
+        #{$end}: -120px;
+    }
+}
+
+/*=============
+    infinity rotate
+==============*/
+@keyframes infinite-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+
+
+/*=============
+    video shadow
+==============*/
+@keyframes video-shadow {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 0px #bdbdbd, 0 0 0px 10px #bdbdbd;
+    }
+}
+
+
+/*=============
+    workflow shadow
+==============*/
+@keyframes workflow-shadow {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 0px #FFFFFF4D, 0 0 0px 5px #FFFFFF4D;
+    }
+}
+
+
+
+/*=============
+   floating element
+==============*/
+@keyframes floating {
+    0% {
+        transform: translateY(-20px);
+    }
+    25% {
+        transform: translateX(20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+    75% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}

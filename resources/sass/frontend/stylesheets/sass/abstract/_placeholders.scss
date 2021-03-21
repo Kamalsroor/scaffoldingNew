@@ -1,0 +1,15 @@
+.infinite-rotate {
+    animation: infinite-rotate 3s linear infinite;
+}
+
+.display-element {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: .5s !important;
+}
+
+.hide-element {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: .5s !important;
+}

@@ -1,0 +1,201 @@
+/*==========
+    About us
+==========*/
+.about {
+  padding: 4rem 0 2rem;
+  &__content {
+      .g-title {
+        color: get-color(dark);
+          @include largeScreen {
+              @include padding($right: 5rem);
+          }
+      }
+      .g-par {
+          @include largeScreen {
+              @include padding($right: 3rem);
+          }
+      }
+
+
+        &__read-more {
+            background: get-color(light);
+            color: get-color(light);
+            height: 40px;
+            margin-top: 10px;
+            border: 2px solid get-color(primary);
+            &::before {
+                background: get-color(primary);
+            }
+            &:hover {
+                color: get-color(primary);
+            }
+        }
+      &__video {
+          width: 60px;
+          height: 60px;
+          background: #641AA5;
+          color: get-color(light);
+          border-radius: 50%;
+          @include font($size: 1.2rem);
+          animation: video-shadow 5s infinite linear forwards;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+              color: get-color(light);
+          }
+      }
+  }
+
+  &__img {
+      padding-bottom: 3rem;
+      img {
+          height: 300px;
+          width: 100%;
+          @include largeScreen {
+              height: 400px;
+          }
+
+      }
+  }
+}
+
+
+/*==========
+    us the best
+==========*/
+.us-the-best {
+    
+    position: relative;
+    background-size: cover;
+    padding: 3rem 0 150px;
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 1rem;
+        color: get-color(secondary);
+        @include font(
+            $size: 1.2rem,
+            $transform: uppercase,
+            $family: 'Sitka Small',
+        )
+    }
+
+    &__title {
+        text-align: center;
+        color: get-color(light);
+        @include font(
+            $size: 2rem,
+            $transform: uppercase,
+            $family: 'Times New Roman',
+        )
+    }
+
+    &__par {
+        padding: 1rem;
+        text-align: center;
+        color: get-color(light);
+        @include font(
+            $size: .9rem,
+            $transform: capitalize,
+            $family: 'Segoe UI',
+        );
+        @include largeScreen {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+.us-the-best__process {
+    position: relative;
+    top: -100px;
+    &__item {
+        padding: 1rem;
+        div {
+            background: get-color(light);
+            box-shadow: 0px 10px 6px #00000029;
+            text-align: center;
+            padding: 1rem;
+            span {
+                display: block;
+                &:nth-of-type(1) {
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 auto 1rem;
+                    img {
+                        height: 85px;
+                    }
+                   
+                }
+                &:nth-of-type(2) {
+                    color: get-color(secondary);
+                    @include font(
+                        $size: 1.1rem,
+                        $family: 'Times New Roman',
+                        $transform: capitalize,
+                        $weight: bold,
+                    );
+                    padding: .5rem 0;
+                }
+                &:nth-of-type(3) {
+                    color: get-color(dark);
+                    @include font(
+                        $size: 1rem,
+                        $family: 'Segoe UI',
+                    )
+                }
+            }
+        }
+    }
+}
+
+
+/*==========
+    work together
+==========*/
+.work-together {
+    padding: 3rem 0;
+    @include largeScreen {
+        padding: 0rem 0;
+    }
+    &__img {
+        padding-bottom: 3rem;
+        img {
+            height: 300px;
+            width: 100%;
+            @include largeScreen {
+                height: 400px;
+            }
+        }
+    }
+    &__content {
+        padding-top: 3rem;
+        @include largeScreen {
+            @include padding($left: 4rem);
+        }
+        &__item {
+            span {
+                &:nth-of-type(1) {
+                    height: 40px;
+                    width: 40px;
+                    @include padding($right: 1rem);
+                    color: get-color(secondary);
+                    font-weight: bold;
+                }
+                &:nth-of-type(2) {
+                    color: get-color(dark);
+                    @include font(
+                        $size: 1rem,
+                        $family: 'Sitka Small',
+                        $transform: capitalize,
+                        $weight: bold,
+                    )
+                }
+            }
+        }
+
+    }
+
+
+}

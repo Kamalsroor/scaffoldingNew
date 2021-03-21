@@ -1,0 +1,124 @@
+// All Media Query Mixins
+@mixin smallScreen {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin mediumScreen {
+    @media (min-width: 767px) {
+        @content;
+    }
+}
+
+@mixin largeScreen {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xLargeScreen {
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin customScreen ($customMedia){
+    @media ($customMedia){
+        @content;
+    }
+}
+
+@mixin print {
+    @media print {
+        @content;
+    }
+}
+
+
+// To create needed fonts with all formats
+
+@mixin font-face ($font-name, $file-name) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($file-name + '.eot');
+        src: url($file-name + '.eot?#iefix') format('embedded-opentype'),
+        url($file-name + '.woff') format('woff'),
+        url($file-name + '.ttf') format('truetype'),
+        url($file-name + '.svg##{$font-name}') format('svg');
+    }
+}
+
+// Padding Mixin
+
+@mixin padding ($width: (null), $top: null, $right: null, $bottom: null, $left: null) {
+    
+    @if $width != null {
+        padding: $width;
+    }
+
+    @else {
+        padding-top: $top;
+        padding-#{$end}: $right;
+        padding-bottom: $bottom;
+        padding-#{$start}: $left;
+    }
+}
+
+// Margin Mixin
+
+@mixin margin ($width: (null), $top: null, $right: null, $bottom: null, $left: null) {
+    
+    @if $width != null {
+        margin: $width;
+    }
+
+    @else {
+        margin-top: $top;
+        margin-#{$end}: $right;
+        margin-bottom: $bottom;
+        margin-#{$start}: $left;
+    }
+}
+
+// Font Mixin 
+@mixin font (
+    $size: null, 
+    $style: null, 
+    $varient: null, 
+    $family: null, 
+    $transform: null, 
+    $weight: null, 
+    $line-height: null,
+    $color: null
+) {
+    font-size: $size;
+    font-family: $family;
+    text-transform: $transform;
+    font-weight: $weight;
+    line-height: $line-height;
+    font-style: $style;
+    font-variant: $varient;
+    color: $color;
+}
+
+
+// Drop font awesome with css
+
+@mixin fontAwesome($content, $style){
+    content: '#{$content}';
+    font-family: "Font Awesome 5 Free"; 
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    @if $style == 'regular' {
+        font-weight: 400;
+
+    } @else if $style == 'solid' {
+        font-weight: 900;
+    } @else {
+        @error "style takes solid or regular only";
+    }
+}

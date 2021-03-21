@@ -1,0 +1,79 @@
+.register-form, .login-form {
+  padding: 120px 0;
+  form {
+    padding: 2rem 1.5rem;
+    border: 1px solid get-color(text);
+    border-top: 5px solid get-color(secondary);
+    width: 100%;
+    @include largeScreen {
+      width: 700px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: get-color(primary);
+      @include font(
+        $size: 2rem,
+        $family: 'Times New Roman',
+        $weight: bold,
+        $transform: capitalize,
+      );
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+    .form-group {
+      button {
+        width: 100%;
+        background: get-color(light-error);
+        border-radius: 25px;
+        padding: .5rem 0;
+        color: get-color(light);
+        cursor: pointer;
+        @include font(
+          $size: 1rem,
+          $family: 'Sitka Small',
+          $weight: bold,
+          $transform: capitalize,
+        );
+      }
+    }
+
+    label {
+      padding-top: .5rem;
+      color: get-color(gray);
+      @include font(
+        $size: .7rem,
+        $family: 'Sitka Small',
+        $weight: bold,
+        $transform: capitalize,
+      );
+      &.checkbox-label {
+        width: calc(100% - 50px);
+      }
+      a {
+        color: get-color(primary);
+      }
+      span {
+        color: get-color(secondary);
+        margin: 0 3px;
+      }
+    }
+    .form-control {
+      background: #eee;
+      color: get-color(gray);
+      border: none;
+      border-radius: 0;
+      &::placeholder {
+        color: get-color(gray);
+        @include font(
+          $size: .7rem,
+          $family: 'Sitka Small',
+          $weight: bold,
+          $transform: capitalize,
+        );
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

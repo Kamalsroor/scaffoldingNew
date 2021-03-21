@@ -55,6 +55,42 @@ if (! function_exists('array_unset_by_value')) {
     }
 }
 
+
+
+if (! function_exists('generateRandomString')) {
+    /**
+     * Get the application logo url.
+     *
+     * @return string
+     */
+
+    function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+}
+
+if (! function_exists('str_limit')) {
+    /**
+     * str limit of string
+     *
+     * @return string
+     */
+
+    function str_limit($string ,$limit = 150 , $end = '...')
+    {
+        return Str::limit($string, $limit ,$end) ;
+
+    }
+}
+
+
+
 if (! function_exists('app_favicon')) {
     /**
      * Get the application favicon url.

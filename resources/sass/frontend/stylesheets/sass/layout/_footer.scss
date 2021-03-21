@@ -1,0 +1,143 @@
+.footer {
+    background: url('../../../imgs/footer-bg.png') no-repeat top left;
+    background-size: cover;
+    padding-top: 60px;
+    .footer__left {
+        h1 {
+            color: get-color(light);
+            @include font(
+                $size: 1.5rem,
+                $transform: capitalize,
+                $family: 'Times New Roman',
+            )
+        }
+        p {
+            color: #ddd;
+            font-size: 13px;
+            @include padding($top: 20px, $right: 20px);
+        }
+    }
+    .footer__right {
+        h1 {
+            color: #ddd;
+            margin: 10px 0 20px 0;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-transform: capitalize;
+            font-family: 'Times New Roman';
+            font-weight: bold;
+        }
+        p {
+            font-size: 13px;
+            color: get-color(light);
+            font-weight: 300;
+            text-transform: capitalize;
+            a {
+                color: get-color(light);
+                transition: .5s;
+                font-weight: bold;
+                font-family: 'Segoe UI';
+                &:hover {
+                    color: get-color(light-error);
+                    transition: .5s;
+                }
+            }
+        }
+        .footer__right__menu {
+            ul {
+                li {
+                    padding: 2px 0;
+                    a {
+                        color: get-color(light);
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        color: get-color(light);
+                        transition: .5s;
+                        &:hover {
+                            color: get-color(light-error);
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+
+        }
+        .contact-us-block {
+            &__item {
+                &__icon {
+                    svg {
+
+                        color: get-color(light-error);
+                    }
+                    i {
+
+                        color: get-color(light-error);
+                    }
+                }
+                &__details {
+                    a {
+                        color: get-color(light);
+                        @include font(
+                            $size: .8rem,
+                        );
+                        &:hover {
+                            color: get-color(light-error);
+                        }
+                    }
+                    color: get-color(light);
+                }
+            }
+        }
+    }
+
+    .to-up {
+        display: flex;
+        a {
+            cursor: pointer;
+            width: 40px;
+            height:40px;
+            border: 1px solid get-color(light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            border-radius: 50%;
+            color : get-color(secondary);
+            font-size: 1.3rem;
+        }
+        &::after {
+            @include margin($top: 22px, $right: 0, $bottom: 0, $left: 2%);
+            content :'';
+            display: block;
+            width: calc(100% - 2% - 40px);
+            height: 1px;
+            background: get-color(light);
+        }
+        &::before {
+            @include margin($top: 22px, $right: 2%, $bottom: 0, $left: 0);
+            content :'';
+            display: block;
+            width: calc(100% - 2% - 40px);
+            height: 1px;
+            background: get-color(light);
+        }
+    }
+    .footer__text {
+        color: get-color(light);
+        p {
+            text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 300;
+            a {
+                color: get-color(secondary);
+                transition: .5s;
+                text-transform: uppercase;
+                &:hover {
+                    color: get-color(light-error);
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}

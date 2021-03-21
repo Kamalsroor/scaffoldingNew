@@ -1,0 +1,211 @@
+/*==========
+    Navbar Of Project
+==========*/
+.main-navbar {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    z-index: 5;
+    border-bottom: 1px solid get-color(border);
+    &.fixed-navbar {
+        background: get-color(primary);
+        position: fixed !important;
+        animation: fixed-navbar .5s ease-in-out 1 forwards;
+    }
+    &.bg-navbar {
+        background: get-color(primary);
+        position: fixed !important;
+    }
+    &__logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        a {
+            display: inline-block;
+            color: get-color(light);
+            @include font(
+                $size: 1.3rem,
+                $weight: bold,
+                $transform: capitalize,
+                $family: 'Sitka Small'
+            );
+            transition: .5s;
+            img {
+                height: 50px;
+                width: 100px;
+            }
+        }
+    }
+    &__links {
+        height: 100%;
+        &__menu {
+            display: flex;
+            align-items: center;
+            &__item {
+                @include margin($left: 1.2rem);
+                padding: .5rem 0;
+                position: relative;
+                &:hover {
+                    & > a {
+                        color: get-color(secondary);
+                        transition: .3s;
+                    }
+                    &::before {
+                        transition: .3s;
+                        color: get-color(secondary) !important;
+                    }
+                }
+                &:not(.contain-menu) {
+                    display: none;
+                    @include largeScreen {
+                        display: block;
+                    }
+                }
+                &.contain-menu {
+                    @include largeScreen {
+                        display: none;
+                    }
+                }
+                &.search-link {
+                    display: block !important;
+                    transform: scale(1.3);
+                    @include largeScreen {
+                        transform: scale(1);
+                    }
+                }
+                &.contain-angle {
+                    margin: 0 1.6rem;
+                    &::before {
+                        @include fontAwesome("\f107", 'solid');
+                        position: absolute;
+                        top: 50%;
+                        #{$end}: -20px;
+                        transform: translateY(-50%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        font-size: 13px;
+                        color: get-color(light);
+                    }
+                }
+                &:not(.remove-hover):hover {
+                    .nav-dropdown {
+                        #{$start}: 0%;
+                        visibility: visible;
+                        opacity: 1;
+                        transition: .5s;
+                    }
+                }
+                &__link {
+                    color: get-color(light);
+                    @include font(
+                        $family: 'Sitka Small',
+                        $transform: capitalize,
+                        $size: 1rem,
+                    );
+                    transition: .5s;
+                    svg {
+                        @include font(
+                            $size: 1rem
+                        );
+                    }
+                    i {
+                        @include font(
+                            $size: 1rem
+                        );
+                    };
+
+                }
+                .sidebar-collapse, .nav-collapse {
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 50%;
+                    justify-content: space-between;
+                    background: get-color(light);
+                    cursor: pointer;
+                    padding: 6px;
+                    span {
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background: #C0409C;
+                        margin: 2px 0;
+                        transition: .5s;
+                        &:nth-of-type(2) {
+                            width: 60%;
+                            // @include margin($left: auto);
+                        }
+                    }
+                    &:hover {
+                        span {
+                            width: 60%;
+                            transition: .5s;
+                            &:nth-of-type(2) {
+                                transition: .5s;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*==========
+    Navbar hidden menu
+==========*/
+.hidden-menu {
+    position: fixed;
+    top: 0;
+    #{$end}: -100%;
+    bottom: 0;
+    background: get-color(primary);
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    padding: .5rem 0;
+    transition: .5s;
+    &.show-sidebar {
+        #{$end}: 0%;
+        transition: .5s;
+    }
+    &__close {
+        padding: 1rem 1rem .5rem 1rem;
+        color: get-color(light);
+    }
+    ul {
+        li {
+            padding: .5rem;
+            a {
+                position: relative;
+                display: inline-block;
+                color: get-color(light);
+                @include font(
+                    $size: 1rem,
+                    $transform: capitalize,
+                );
+                &::before {
+                    @include fontAwesome("\f107", 'solid');
+                    position: absolute;
+                    top: 50%;
+                    #{$end}: -20px;
+                    transform: translateY(-50%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    font-size: 13px;
+                    color: get-color(light);
+                }
+            }
+            .hide-dropdown {
+                @include padding($left: 2rem);
+                a {
+                    color: get-color(light);
+                }
+            }
+        }
+    }
+}

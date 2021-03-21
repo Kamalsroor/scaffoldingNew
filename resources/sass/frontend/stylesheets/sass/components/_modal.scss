@@ -1,0 +1,146 @@
+.video-modal {
+    .modal-dialog {
+        height: 100%;
+        width: 100% !important;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include smallScreen {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+    .modal-header {
+        border-bottom: transparent;
+        justify-content: flex-end;
+        padding-bottom: 5px;
+        padding-right: 0;
+        padding-left: 0;
+        button {
+            color: get-color(light);
+            border: 1px solid get-color(light);
+            font-size: 15px;
+            padding: 5px 7px;
+            cursor: pointer;
+        }
+    }
+    
+    .modal-content {
+        border: none !important;
+        width: 90%;
+        margin: auto;
+        background: transparent !important;
+        @include smallScreen {
+            width: 80%;
+        }
+        @include mediumScreen {
+            width: 60%;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            margin: auto;
+            height: 350px;
+            @include mediumScreen {
+                height: 500px;
+            }
+        }   
+    }
+}
+
+
+.blog-modal {
+    .modal-content {
+        border-top: 5px solid get-color(secondary);
+        border-radius: 0 !important;
+        .modal-header {
+            background: transparent;
+            position: absolute;
+            top: 1rem;
+            #{$end}: 1rem;
+            border-bottom: none;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                background: #ddd;
+                color: get-color(dark);
+                border-radius: 50%;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    padding: 0;
+    img {
+        height: 220px;
+        width: 100%;
+        @include largeScreen {
+            height: 300px;
+        }
+    }
+    p {
+        @include padding($left: 2rem, $bottom: 2rem, $top: 2rem, $right: 2rem);
+        color: get-color(text);
+        @include font(
+            $size: .9rem,
+            $family: 'Segoe UI',
+            $weight: bold,
+        )
+    }
+}
+
+.services-modal {
+    .modal-content {
+        border-top: 5px solid get-color(secondary);
+        border-radius: 0 !important;
+        .modal-header {
+            background: transparent;
+            position: absolute;
+            top: 1rem;
+            #{$end}: 1rem;
+            border-bottom: none;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                background: get-color(light);
+                color: get-color(dark);
+                border-radius: 50%;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    padding: 0;
+    img {
+        height: 220px;
+        width: 100%;
+        @include largeScreen {
+            height: 300px;
+        }
+    }
+    h1 {
+        color: get-color(primary);
+        text-align: center;
+        padding-top: 1rem;
+        @include font(
+            $size: 2.6rem,
+            $weight: bold,
+            $family: 'Times New Roman',
+
+        )
+    }
+    p {
+        @include padding($left: 2rem, $bottom: 2rem, $top: 1rem, $right: 2rem);
+        color: get-color(text);
+        @include font(
+            $size: .9rem,
+            $family: 'Segoe UI',
+            $weight: bold,
+        )
+    }
+}

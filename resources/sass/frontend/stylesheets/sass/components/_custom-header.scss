@@ -1,0 +1,62 @@
+.custom-header {
+  background: url('../../../imgs/header-custom.jpg') no-repeat top center;
+  background-size: cover;
+  &__item {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include largeScreen {
+      height: 550px;
+    }
+    &__content {
+      h1 {
+        text-align: center;
+
+        padding-top: .5rem;
+        @include font(
+            $size: 2.5rem,
+            $family: 'Times New Roman',
+            $weight: bold,
+            $transform: uppercase,
+        );
+        line-height: 1.2;
+        color: get-color(light);
+        padding-bottom: 1rem;
+        letter-spacing: 2px;
+      }
+      img {
+        width: 250px;
+        margin: 0 auto;
+        @include mediumScreen {
+          width: 500px;
+        }
+      }
+      span {
+        margin-top: 1.5rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        a, span {
+          color: get-color(light);
+          @include font(
+            $size: 1.2rem,
+            $family: 'Times New Roman',
+            $weight: bold,
+            $transform: capitalize,
+          );
+        }
+        span {
+          margin: 0 5px;
+        }
+        a {
+          transition: .5s;
+          &:hover {
+            transition: .5s;
+            color: get-color(secondary);
+          }
+        }
+      }
+    }
+  }
+}

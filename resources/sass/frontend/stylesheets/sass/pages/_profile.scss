@@ -1,0 +1,167 @@
+.user-profile {
+    padding: 8rem 0 5rem;
+    .user-profile__left {
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 30px;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+        .user-profile__left__head {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 1.3rem;
+
+            .user-profile__left__head__icon {
+                display: flex;
+                align-items: center;
+                color: get-color(dark);
+                font-size: 30px;
+            }
+            .user-profile__left__head__details {
+                @include padding($left: 10px);
+                display: flex;
+                flex-direction: column;
+                span {
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    font-family: 'Tahoma';
+                    &:nth-of-type(1) {
+                        color: get-color(dark);
+                        font-size: 15px;
+                    }
+                    &:nth-of-type(2) {
+                        color: #09539D;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .user-profile__left__cat {
+            ul {
+                padding: 0 10px;
+                li {
+                    padding: 5px 0;
+                    a {
+                        padding: 8px 10px;
+                        display: block;
+                        width: 100%;
+                        color: get-color(dark);
+                        font-family: 'Tahoma';
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        border: 1px solid get-color(border);
+                        border-radius: 10px;
+                        border-#{$start}: 8px solid get-color(secondary);
+                        text-align: center;
+                        font-size: 15px;
+                        transition: .5s;
+                        &.active {
+                            color: get-color(secondary);
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            color: get-color(secondary);
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .user-profile__right {
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 30px;
+        padding: .5rem 0;
+
+        @include smallScreen {
+            padding: .5rem 2rem;
+        }
+        .user-profile__right__head {
+            color: get-color(dark);
+            padding: 1rem 0;
+            font-family: 'Tahoma';
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: capitalize;
+            @include smallScreen {
+                font-size: 25px;
+            }
+            &.contain-border {
+                border-top: 1px solid #ddd;
+            }
+        }
+        .user-profile__right__details {
+            ul {
+                padding-bottom: 1.2rem;
+                li {
+                    padding: 3px 0;
+                    span {
+                        &:nth-of-type(1) {
+                            color: get-color(dark);
+                            font-family: 'Tahoma';
+                            font-weight: bold;
+                            text-transform: capitalize;
+                            min-width: 120px;
+                            display: inline-block;
+                            font-size: 14px;
+                        }
+                        &:nth-of-type(2) {
+                            color: get-color(dark);
+                            font-family: 'Tahoma';
+                            font-weight: bold;
+                            text-transform: capitalize;
+                            font-size: 14px;
+                        }
+                    }
+                    textarea {
+                        width: 100%;
+                        resize: none;
+                        height: 100px;
+                        margin-top: 1rem;
+                        border: 1px solid get-color(dark);
+                    }
+                }
+            }
+            .user-profile__right__details__right {
+                height: 100%;
+                padding: .3rem 0 1rem;
+                button {
+                    color: get-color(light);
+                    background: get-color(dark);
+                    padding: 8px 30px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-family: 'Tahoma';
+                    width: 100%;
+                    cursor: pointer;
+                    @include mediumScreen {
+                        width: auto;
+                    }
+                }
+            }
+            .edit-user, .edit-address {
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 15px;
+                    input {
+                        border: none;
+                        border: 1px solid get-color(dark);
+                        padding: 7px 15px;
+                        display: inline-block;
+                        &:focus {
+                            outline: none;
+                        }
+                        &::placeholder {
+                            color: get-color(dark);
+                            text-transform: capitalize;
+                            font-family: 'sitka';
+                            font-weight: bold;
+                            font-size: 12px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

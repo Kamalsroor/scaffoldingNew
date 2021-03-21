@@ -1,0 +1,112 @@
+.add-comment {
+  position: fixed;
+  z-index: 6;
+  bottom: 2rem;
+  right: 1rem;
+  @include largeScreen {
+    right: 3rem;
+  }
+  &__box {
+    display: none;
+    width: 250px;
+    box-shadow: 0px 10px 6px #00000029;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    @include largeScreen {
+      width: 280px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: calc(0px - 25px);
+      right: 1.2rem;
+      display: block;
+      z-index: -1;
+      width: 0;
+      height: 0;
+      border-top: 25px solid transparent;
+      border-right: 36px solid get-color(light);
+      border-bottom: 25px solid transparent;
+
+    }
+    &__head {
+      background: get-color(light-error);
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      span {
+        color: get-color(light);
+        @include font(
+          $size: 1.1rem,
+          $family: 'Times New Roman',
+          $transform: capitalize,
+        );
+        &:nth-of-type(1) {
+          padding-#{$end}: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &__form {
+      background: get-color(light);
+      padding: 1rem;
+      div {
+        padding: .3rem 0;
+        input, textarea {
+          border: 1px solid #00000052;
+          color: #00000052;
+          padding: .4rem .6rem;
+          width: 100%;
+          &::placeholder {
+            color: #00000052;
+            @include font(
+              $size: .8rem,
+              $family: 'Times New Roman',
+              $transform: uppercase,
+            );
+          }
+        }
+        textarea {
+          resize: none;
+          height: 100px;
+        }
+        button {
+          background: #4B13B6;
+          color: get-color(light);
+          padding: .3rem 1.2rem;
+          display: inline-block;
+          cursor: pointer;
+          span {
+            margin: .2rem 0;
+            @include font(
+              $size: .9rem,
+              $family: 'Times New Roman',
+              $transform: uppercase,
+              $weight: bold,
+            )
+          }
+        }
+      }
+    }
+  }
+  button[type="button"] {
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #271e1e61;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent linear-gradient(180deg, #00CCEB 0%, #0AA7E7 38%, #196BE1 100%, #2A27DA 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 6px #00000029;
+    color: get-color(light);
+    margin-left: auto;
+    @include font(
+        $size: 2rem
+    );
+    cursor: pointer;
+    transition: .5s;
+  }
+}

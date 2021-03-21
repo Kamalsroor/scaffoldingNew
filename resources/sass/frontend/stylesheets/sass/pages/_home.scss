@@ -1,0 +1,773 @@
+/*==========
+    Home Header
+==========*/
+.header {
+    background-size: cover;
+    &__item {
+        height: 550px;
+        min-height: 550px;
+        display: flex;
+        align-items: center;
+        @include mediumScreen {
+            height: 100vh;
+            min-height: 100vh;
+        }
+        &__content {
+            @include mediumScreen {
+                @include padding($left: 4rem);
+            }
+            span.head-subtitle {
+                @include font(
+                    $size: .9rem,
+                    $family: 'Sitka Small',
+                    $weight: bold,
+                    $transform: uppercase,
+                );
+                color: get-color(secondary);
+                
+            }
+            h1 {
+                padding-top: .5rem;
+                @include font(
+                    $size: 3rem,
+                    $family: 'Segoe UI',
+                    $weight: bold,
+                    $transform: capitalize,
+                );
+                line-height: 1.2;
+                color: get-color(light);
+                padding-bottom: 1rem;
+                letter-spacing: 2px;
+            }
+        }
+        &__img {
+            display: none;
+            @include largeScreen {
+                display: block;
+                padding: 3rem 0 0;
+            }
+            img {
+                height: 430px;
+                width: 100%;
+                animation: floating 20s linear infinite;
+            }
+        }
+    }
+}
+
+/*==========
+    About us
+==========*/
+.about-home {
+    padding: 3rem 0;
+    &__content {
+        .g-title {
+            @include largeScreen {
+                @include padding($right: 5rem);
+            }
+        }
+        .g-par {
+            @include largeScreen {
+                @include padding($right: 3rem);
+            }
+        }
+        &__read-more {
+            background: get-color(light);
+            color: get-color(light);
+            height: 50px;
+            margin-top: 5px;
+            border: 2px solid get-color(primary);
+            &::before {
+                background: get-color(primary);
+            }
+            &:hover {
+                color: get-color(primary);
+            }
+        }
+        &__video {
+            width: 60px;
+            height: 60px;
+            background: #641AA5;
+            color: get-color(light);
+            border-radius: 50%;
+            @include font($size: 1.2rem);
+            animation: video-shadow 5s infinite linear forwards;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                color: get-color(light);
+            }
+        }
+        
+    }
+
+    &__img {
+        padding-bottom: 3rem;
+        img {
+            height: 300px;
+            width: 100%;
+            @include largeScreen {
+                height: 400px;
+            }
+
+        }
+    }
+}
+
+/*==========
+    get business
+==========*/
+.get-online-business {
+    padding: 3rem 0;
+    @include largeScreen {
+        padding: 0rem 0;
+    }
+    &__img {
+        padding-bottom: 3rem;
+        img {
+            height: 400px;
+            width: 100%;
+            @include largeScreen {
+                height: 600px;
+            }
+
+        }
+    }
+
+    &__content {
+        padding-top: 3rem;
+        &__item {
+            span {
+                &:nth-of-type(1) {
+                    height: 40px;
+                    width: 40px;
+                    @include padding($right: 1rem);
+                    img {
+                        height: 35px;
+                        width: 35px;
+                    }
+                }
+                &:nth-of-type(2) {
+                    color: get-color(secondary);
+                    @include font(
+                        $size: 1rem,
+                        $family: 'Sitka Small',
+                        $transform: capitalize,
+                    )
+                }
+            }
+        }
+
+    }
+
+
+}
+
+/*==========
+    Work flow
+==========*/
+.work-flow {
+    background-size: cover;
+    padding: 3rem 0;
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 1rem;
+        color: get-color(secondary);
+        @include font(
+            $size: 1.2rem,
+            $transform: uppercase,
+            $family: 'Sitka Small',
+        )
+    }
+
+    &__title {
+        text-align: center;
+        color: get-color(light);
+        @include font(
+            $size: 2rem,
+            $transform: uppercase,
+            $family: 'Times New Roman',
+        )
+    }
+
+    $self: &;
+    .slick-current {
+        #{$self}__process {
+            &__item {
+                div {
+                    span {
+                        &:nth-of-type(1) {
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0rem;
+                                left: 0rem;
+                                right: 0rem;
+                                bottom: 0rem;
+                                z-index: -1;
+                                border-radius: 50%;
+                                animation: workflow-shadow 5s infinite linear forwards;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    &__process {
+        padding: 2.5rem 0 3.5rem;
+        &__item {
+            div {
+                padding-top: .5rem;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: calc(35px + .5rem);
+                    height: 3px;
+                    width: 100%;
+                    background: #FFFFFF4D;
+                    display: block;
+                    z-index: -1;
+                }
+                text-align: center;
+                span {
+                    position: relative;
+                    display: block;
+                    &:nth-of-type(1) {
+                        width: 70px;
+                        height: 70px;
+                        padding: 1rem;
+                        border-radius: 50%;
+                        background: get-color(light);
+                        margin: 0 auto 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            height: 30px;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        color: get-color(light);
+                        @include font(
+                            $size: 1.1rem,
+                            $family: 'Segoe UI',
+                            $transform: capitalize,
+                            $weight: bold,
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    &__btn {
+        button {
+            span {
+                &:nth-of-type(2) {
+                    @include padding($left: .5rem);
+                    color: get-color(error);
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+/*==========
+    services
+==========*/
+.services-home {
+    padding: 3rem 0;
+    &__heading  {
+        text-align: center;
+        @include largeScreen {
+            width: 75%;
+            margin: 0px auto;
+        }
+
+        .g-subtitle {
+            font-size: 1.5rem;
+        }
+        .g-par {
+            font-size: 1rem;
+        }
+    }
+    &__cards {
+        padding-top: 2rem;
+        @include largeScreen {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        &__item {
+            padding: 2rem 1rem;
+            @include largeScreen {
+                width: calc(100% / 3);
+                padding: 1rem 1rem;
+            }
+            
+            &__box {
+                text-align: center;
+                transition: .5s;
+                &__img {
+                    img {
+                        margin: 0px auto;
+                        height: 55px;
+                    }
+                }
+                &__content {
+                    span {
+                        display: block;
+                        padding: 1rem 0;
+                        @include font(
+                            $transform: capitalize,
+                            $family: 'Sitka Small',
+                            $weight: bold,
+                            $size: 1.2rem,
+                        );
+                        color: get-color(dark);
+                    }
+                    p {
+                        padding-bottom: .5rem;
+                        @include font(
+                            $family: 'Segoe UI',
+                            $size: .9rem,
+                            $weight: bold,
+                        );
+                        color: get-color(text);
+                    }
+                }
+
+                &:hover {
+                    transition: .5s;
+                    box-shadow: 0px 10px 10px #00000029;
+                }
+            }
+        }
+    }
+}
+
+/*==========
+    testmonials
+==========*/
+.testmonials {
+    background: transparent linear-gradient(180deg, #4C0ACC 0%, #260566 100%) 0% 0% no-repeat padding-box;
+    padding: 4rem 0;
+    &__subtitle {
+        text-align: center;
+        padding-bottom: 1rem;
+        color: get-color(secondary);
+        @include font(
+            $size: 1.2rem,
+            $transform: uppercase,
+            $family: 'Sitka Small',
+        )
+    }
+
+    &__title {
+        text-align: center;
+        color: get-color(light);
+        @include font(
+            $size: 2rem,
+            $transform: uppercase,
+            $family: 'Times New Roman',
+        )
+    }
+    &__text {
+        &__item {
+            color: #DDDDDD;
+            margin: 2rem auto;
+            line-height: 1.6;
+            padding: 0 1rem;
+            @include font(
+                $size: .95rem,
+                $family: 'Segoe UI',
+                $weight: bold,
+            );
+            @include largeScreen {
+                width: 70%;
+                margin: 4rem auto 3rem;
+            }
+            &::before {
+                @include fontAwesome('\f10d', 'solid');
+                position: relative;
+                #{$start}: -1rem;
+                bottom: .5rem;
+                color: get-color(secondary);
+            }
+            &::after {
+                @include fontAwesome('\f10e', 'solid');
+                position: relative;
+                #{$end}: -1rem;
+                top: .5rem;
+                color: get-color(secondary);
+            }
+
+        }
+    }
+    &__clients {
+        width: 40%;
+        margin: 0 auto;
+        .slick-active {
+            opacity: .5;
+            &.slick-current {
+                opacity: 1;
+            }
+        }
+        &__items {
+            span {
+                display: block;
+                height: 60px;
+                img {
+                    margin: auto;
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+
+/*==========
+    plans
+==========*/
+.plans {
+    padding: 4rem 0;
+    &__heading {
+        .g-subtitle {
+            @include font(
+                $size: 1.2rem,
+                $weight: bold,
+                $transform: uppercase,
+            )
+        }
+        &__control {
+            width: 280px;
+            background: transparent linear-gradient(90deg, #A40DCA 0%, #15146D 100%) 0% 0% no-repeat padding-box;
+            border-radius: 50px;
+            margin: 2.5rem auto;
+            padding: .2rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: .2rem;
+                bottom: .2rem;
+                #{$end}: .2rem;
+                width: 50%;
+                background: get-color(light);
+                border-radius: 50px;
+                transition: .5s;
+            }
+            &.enable {
+                &::after {
+                    #{$end}: calc(50% - .2rem);
+                    transition: .5s;
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: calc(100% / 2);
+                height: 40px;
+                border-radius: 50px;
+                color: get-color(light);
+                position: relative;
+                z-index: 2;
+                @include font(
+                    $size: 1rem,
+                    $weight: bold,
+                    $transform: capitalize,
+                    $family: 'Sitak Small',
+                );
+                &.active {
+                    color: get-color(light-error);
+                }
+            }
+        }
+    }
+    &__cards {
+        padding: 2rem 0;
+        &__item {
+            padding: 1rem;
+            $self: &;
+            &.active {
+                #{$self}__box {
+                    background: get-color(primary);
+                    &__head {
+                        color: get-color(light);
+                    }
+                    
+                    &__price {
+                        color: get-color(light);
+                    }
+                    &__adv {
+                        li {
+                            color: get-color(light);
+                        }
+                    }
+                    &__btn {
+                        a {
+                            background: get-color(light);
+                            color: get-color(dark);
+                        }
+                    }
+                }
+            }
+            
+            &__box {
+                background: get-color(light);
+                box-shadow: 0px 10px 10px #00000029;
+                padding: 2rem 1rem;
+                text-align: center;
+                
+                &__head {
+                    @include font(
+                        $transform: uppercase,
+                        $family: 'Sitka Small',
+                        $weight: bold,
+                        $size: 1.3rem,
+                    );
+                    color: get-color(light-error);
+                    padding-bottom: 1rem;
+                }
+                &__img {
+                    img {
+                        margin: 0px auto;
+                        height: 80px;
+                    }
+                }
+                &__price {
+                    @include font(
+                        $transform: uppercase,
+                        $family: 'Times New Roman',
+                        $weight: bold,
+                        $size: 1.3rem,
+                    );
+                    color: get-color(primary);
+                    padding: 1rem 0;
+                    span {
+                        color: get-color(secondary);
+                        text-transform: capitalize;
+                    }
+                }
+                &__adv {
+                    li {
+                        padding: .2rem 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #333333;
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        svg {
+                            @include margin($right: .5rem);
+                            color: get-color(secondary);
+                            font-size: .8rem;
+                        }
+                    }
+                }
+                &__btn {
+                    padding-top: 3rem;
+                    a {
+                        background: transparent linear-gradient(90deg, #A40DCA 0%, #15146D 100%) 0% 0% no-repeat padding-box;
+                        color: get-color(light);
+                        @include font(
+                            $size: 1.1rem,
+                            $transform: uppercase,
+                            $weight: bold,
+                            $family: 'Segoe UI',
+
+                        );
+                        padding: .4rem 1.3rem;
+                        border-radius: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*==========
+    contact
+==========*/
+.contact {
+    background: transparent linear-gradient(100deg, #00CCEB 0%, #4B13B6 100%) 0% 0% no-repeat padding-box;
+    .container {
+        padding: 3rem 0;
+        position: relative;
+        
+    }
+    &__shape1 {
+        position: absolute;
+        #{$start}: 0;
+        display: none;
+        @include largeScreen {
+            display: block;
+        }
+    }
+    &__shape2 {
+        position: absolute;
+        #{$end}: 0;
+        bottom: 0;
+        height: 120px;
+        display: none;
+        @include largeScreen {
+            display: block;
+        }
+    }
+    &__content {
+        padding: 0 2rem;
+        @include largeScreen {
+            @include padding($left: 5rem);
+        }
+        h5 {
+            color: get-color(light);
+            @include font(
+                $size: 2.5rem,
+                $transform: capitalize,
+                $weight: bold,
+                $family: 'Times New Roman',
+
+            )
+        }
+        p {
+            color: #ddd;
+            @include font(
+                $size: .9rem,
+                $transform: capitalize,
+                $family: 'Segoe UI',
+            );
+        }
+    }
+    &__btn {
+        padding-top: 2rem;
+        
+        .btn-hover {
+            border: 2px solid get-color(light);
+            color: get-color(light);
+            &::before {
+                background: transparent;
+            }
+            &:hover {
+                &::before {
+                    background: get-color(light);
+                }
+            }
+        }
+    }
+}
+
+/*==========
+    blog
+==========*/
+.blog {
+    padding: 6rem 0;
+    &__heading {
+        text-align: center;
+        .g-subtitle {
+            @include font(
+                $size: 1.2rem,
+                $weight: bold,
+                $transform: uppercase,
+            )
+        }
+    }
+    &__cards {
+        padding-top: 2rem;
+        &__item {
+            padding: 0 1rem;
+            &__box {
+                &__img {
+                    height: 240px;
+                    @include largeScreen {
+                        height: 280px;
+                    }
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                &__content {
+                    box-shadow: 0px 6px 10px #77777761;
+                    padding: 1.2rem 1rem;
+                    width: 90%;
+                    margin: auto;
+                    background: get-color(light);
+                    position: relative;
+                    top: -2rem;
+                    transition: .5s;
+                    &__time {
+                        padding: .5rem .7rem;
+                        @include font(
+                            $transform: capitalize,
+                            $family: 'Segoe UI',
+                            $weight: bold,
+                            $size: .9rem,
+                        );
+                        color: get-color(light);
+                        background: get-color(light-error);
+                    }
+                    &__detail {
+                        margin: 1rem 0 .5rem;
+                        @include font(
+                            $transform: capitalize,
+                            $family: 'Times New Roman',
+                            $weight: bold,
+                            $size: 1.1rem,
+                        );
+                        color: get-color(primary-light);
+                    }
+                    &__btn {
+                        color: get-color(secondary);
+                        @include font(
+                            $size: .8rem,
+                            $family: 'Sitka Small',
+                            $weight: bold,
+                            $transform: uppercase,
+                        )
+                    }
+                }
+            }
+
+            $slef: &;
+            &:hover {
+                #{$slef}__box__content {
+                    top: -3rem;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}
+
+
+/*==========
+    brand
+==========*/
+.brand {
+    padding: 1rem 0 ;
+    @include largeScreen {
+        padding: 2rem 0 5rem;
+
+    }
+    &__cards {
+        &__item {
+            padding: 0 1rem;
+            img {
+                height: 60px;
+                width: 120px;
+                object-fit: contain;
+            }
+        }
+    }
+}

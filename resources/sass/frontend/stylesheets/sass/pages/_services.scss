@@ -1,0 +1,130 @@
+/*==========
+    services
+==========*/
+.services {
+  padding: 3rem 0;
+  &__heading  {
+      text-align: center;
+      @include largeScreen {
+          width: 75%;
+          margin: 0px auto;
+      }
+
+      .g-subtitle {
+          font-size: 1.5rem;
+      }
+      .g-par {
+          font-size: 1rem;
+      }
+  }
+  &__cards {
+      padding-top: 2rem;
+      @include largeScreen {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+      &__item {
+          padding: 2rem 1rem;
+          @include largeScreen {
+              width: calc(100% / 3);
+              padding: 1rem 1rem;
+          }
+
+          &__box {
+              display: block;
+              text-align: center;
+              transition: .5s;
+              &__img {
+                  img {
+                      margin: 0px auto;
+                      height: 55px;
+                  }
+              }
+              &__content {
+                  span {
+                      display: block;
+                      padding: 1rem 0;
+                      @include font(
+                          $transform: capitalize,
+                          $family: 'Sitka Small',
+                          $weight: bold,
+                          $size: 1.2rem,
+                      );
+                      color: get-color(dark);
+                  }
+                  p {
+                      padding-bottom: .5rem;
+                      @include font(
+                          $family: 'Segoe UI',
+                          $size: .9rem,
+                          $weight: bold,
+                      );
+                      color: get-color(text);
+                  }
+              }
+              &:hover {
+                transition: .5s;
+                box-shadow: 0px 10px 10px #00000029;
+              }
+          }
+      }
+  }
+}
+
+
+/*==========
+    math best
+==========*/
+.match-best {
+  background: #F2FAFF;
+  padding: 3rem 0;
+  @include largeScreen {
+      padding: 0rem 0;
+  }
+  &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center ;
+      padding: 3rem 0;
+      img {
+          height: 350px;
+          width: 100%;
+          @include largeScreen {
+              height: 400px;
+          }
+      }
+  }
+  &__content {
+      padding-top: 3rem;
+      @include largeScreen {
+          @include padding($left: 4rem);
+      }
+      .g-title {
+        color: get-color(dark);
+      }
+      &__item {
+          span {
+              &:nth-of-type(1) {
+                  height: 40px;
+                  width: 40px;
+                  @include padding($right: 1rem);
+                  color: get-color(light-error);
+                  font-weight: bold;
+              }
+              &:nth-of-type(2) {
+                  color: get-color(dark);
+                  @include font(
+                      $size: 1rem,
+                      $family: 'Sitka Small',
+                      $transform: capitalize,
+                      $weight: bold,
+                  )
+              }
+          }
+      }
+
+  }
+
+
+}

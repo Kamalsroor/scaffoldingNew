@@ -1,0 +1,39 @@
+.social-media-links {
+  position: fixed;
+  top: 150px;
+  #{$start}: 0;
+  z-index: 5;
+  display: none;
+  @include largeScreen {
+    display: block;
+  }
+  a {
+    box-shadow: 10px 10px 10px #00000029;
+    background: get-color(light);
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: get-color(light-error) !important;
+    font-size: 1rem;
+    border-bottom: 1px solid get-color(text);
+    transition: .5s;
+    &:hover {
+      color: get-color(light) !important;
+      background: get-color(light-error);
+      transition: .5s;
+      width: 60px;
+    }
+    &:nth-of-type(1) {
+      border-top-#{$end}-radius: 10px;
+      border-top-#{$start}-radius: 10px;
+    }
+    &:nth-last-of-type(1) {
+      border-bottom-#{$end}-radius: 10px;
+      border-bottom-#{$start}-radius: 10px;
+      border-bottom: none;
+    }
+  }
+}

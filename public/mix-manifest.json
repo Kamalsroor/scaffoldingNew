@@ -1,8 +1,10 @@
 {
-    "/js/adminlte3.js": "/js/adminlte3.js?id=7bd228c06a753d3b3d24",
-    "/js/vali.js": "/js/vali.js?id=cf12314c8803f3a8c46f",
+    "/js/adminlte3.js": "/js/adminlte3.js?id=7de8bdc4ac9f3ae93c36",
+    "/js/vali.js": "/js/vali.js?id=ad411cad173c233ae3af",
+    "/js/frontend.js": "/js/frontend.js?id=a832e9ff239eef542449",
     "/css/adminlte3.css": "/css/adminlte3.css?id=6cf4a9f1331c1944133a",
     "/css/vali.css": "/css/vali.css?id=5c0b0c5b428e8e7a1242",
+    "/css/main.css": "/css/main.css?id=ddaf49cb0ad3f68a5870",
     "/js/adminlte3-auth.js": "/js/adminlte3-auth.js?id=0ff79a1c76cb3193e00a",
     "/js/adminlte3-auth.js.LICENSE.txt": "/js/adminlte3-auth.js.LICENSE.txt?id=3d608ebffbf5dfb5118d",
     "/js/adminlte3.js.LICENSE.txt": "/js/adminlte3.js.LICENSE.txt?id=cdf1093489af5d648ff7",
@@ -10,5 +12,6 @@
     "/css/adminlte3-auth.css": "/css/adminlte3-auth.css?id=a439de0fbd50e1f35c98",
     "/css/adminlte3-auth.rtl.css": "/css/adminlte3-auth.rtl.css?id=8091dab9a0a0a8715cf4",
     "/css/adminlte3.rtl.css": "/css/adminlte3.rtl.css?id=57bd93b76f1261ecc7d9",
+    "/css/main.rtl.css": "/css/main.rtl.css?id=10d3f3f68f81e83fa786",
     "/css/vali.rtl.css": "/css/vali.rtl.css?id=53b4cc3b7f7b0eacc430"
 }

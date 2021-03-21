@@ -1,0 +1,58 @@
+.preload {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: get-color(light);
+        
+
+
+
+    .loader {
+        height:140px;
+        width:140px;
+        border:solid 4px get-color(light-error);
+        border-top-color:get-color(light);
+        border-right-color:get-color(light);
+        border-radius:50%;
+        position:absolute;
+        top:50%;
+        right:0;
+        left:0;
+        margin:auto;
+        margin-top:-70px;
+        transition:all .3s ease;
+        z-index:199;
+        animation:loader 2s infinite linear;
+        &::before, &::after {
+            content: ' ';
+            position:absolute;
+            border:inherit;
+            border-radius:50%;
+        }
+        &::before {
+            left:15px;
+            top:15px;
+            bottom:15px;
+            right:15px;
+            opacity:.5;
+            animation: loader 3s infinite linear;
+        }
+        &::after {
+            left:30px;
+            right:30px;
+            top:30px;
+            bottom:30px;
+            opacity:.25;
+            animation: loader 1.5s infinite linear;
+        }
+    }
+}
+

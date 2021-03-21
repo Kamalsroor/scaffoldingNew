@@ -19,10 +19,18 @@ Route::middleware('dashboard.locales')->group(function () {
 });
 
 Route::impersonate();
+Route::get('locale/{locale}', 'LocaleController@update')->name('locale')->where('locale', '(ar|en)');
 
-Route::get('/', function () {
-    dd(Request()->all());
-    return view('welcome');
+// Route::get('/', function () {
+//     dd(Request()->all());
+//     return view('welcome');
+// });
+
+
+Route::as('front.')->group(function () {
+    Route::get('/', 'Frontend\FrontendController@index')->name('home');
+
+    // Route::post('/contact/form' , 'Frontend\FrontendController@contactForm')->name('contact.form');
 });
 
 

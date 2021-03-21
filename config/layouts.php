@@ -11,7 +11,7 @@ return [
     /*
      * The layout of front end.
      *
-     * Supported : "vali", "adminlte3"
+     * Supported : "vali", "adminlte3" ,"frontend"
      */
-    'frontend' => 'adminlte3',
+    'frontend' => 'frontend',
 ];
