@@ -27,11 +27,11 @@ Route::get('locale/{locale}', 'LocaleController@update')->name('locale')->where(
 // });
 
 
-Route::as('front.')->group(function () {
-    Route::get('/', 'Frontend\FrontendController@index')->name('home');
+// Route::as('front.')->group(function () {
+//     Route::get('/', 'Frontend\FrontendController@index')->name('home');
 
-    // Route::post('/contact/form' , 'Frontend\FrontendController@contactForm')->name('contact.form');
-});
+//     // Route::post('/contact/form' , 'Frontend\FrontendController@contactForm')->name('contact.form');
+// });
 
 
 //kamalsroor2

@@ -20,6 +20,7 @@ return [
     'dashboard_templates' => [
         'adminlte3' => 'Adminlte 3',
         'vali' => 'Vali',
+        'adminty' => 'Adminty',
     ],
     'frontend_templates' => [],
     'messages' => [

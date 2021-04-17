@@ -19,21 +19,21 @@
         }
     ],
     "paths": {
-        "/categories": {
+        "/roles": {
             "get": {
                 "tags": [
-                    "Categories"
+                    "Roles"
                 ],
-                "summary": "Get list of categories",
-                "description": "Returns list of categories",
-                "operationId": "getCategoriesList",
+                "summary": "Get list of roles",
+                "description": "Returns list of roles",
+                "operationId": "getRolesList",
                 "responses": {
                     "200": {
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CategoryResource"
+                                    "$ref": "#/components/schemas/RoleResource"
                                 }
                             }
                         }
@@ -47,19 +47,19 @@
                 }
             }
         },
-        "/categories/{id}": {
+        "/roles/{id}": {
             "get": {
                 "tags": [
-                    "Categories"
+                    "Roles"
                 ],
-                "summary": "Get category information",
-                "description": "Returns category data",
-                "operationId": "getCategoryById",
+                "summary": "Get role information",
+                "description": "Returns role data",
+                "operationId": "getRoleById",
                 "parameters": [
                     {
                         "name": "id",
                         "in": "path",
-                        "description": "Category id",
+                        "description": "Role id",
                         "required": true,
                         "schema": {
                             "type": "integer"
@@ -72,7 +72,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Category"
+                                    "$ref": "#/components/schemas/Role"
                                 }
                             }
                         }
@@ -89,21 +89,21 @@
                 }
             }
         },
-        "/select/categories": {
+        "/select/roles": {
             "get": {
                 "tags": [
-                    "Categories"
+                    "Roles"
                 ],
-                "summary": "Get list of Select categories",
-                "description": "Returns list of Select categories",
-                "operationId": "getSelectCategoriesList",
+                "summary": "Get list of Select roles",
+                "description": "Returns list of Select roles",
+                "operationId": "getSelectRolesList",
                 "responses": {
                     "200": {
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CategoryResource"
+                                    "$ref": "#/components/schemas/RoleResource"
                                 }
                             }
                         }
@@ -120,9 +120,9 @@
     },
     "components": {
         "schemas": {
-            "Category": {
-                "title": "Category",
-                "description": "Category model",
+            "Role": {
+                "title": "Role",
+                "description": "Role model",
                 "properties": {
                     "id": {
                         "title": "ID",
@@ -133,9 +133,9 @@
                     },
                     "name": {
                         "title": "Name",
-                        "description": "Name of the new category",
+                        "description": "Name of the new role",
                         "type": "string",
-                        "example": "A nice category"
+                        "example": "A nice role"
                     },
                     "created_at": {
                         "title": "Created at",
@@ -161,12 +161,12 @@
                 },
                 "type": "object",
                 "xml": {
-                    "name": "Category"
+                    "name": "Role"
                 }
             },
-            "CategoryResource": {
-                "title": "CategoryResource",
-                "description": "Category resource",
+            "RoleResource": {
+                "title": "RoleResource",
+                "description": "Role resource",
                 "properties": {
                     "data": {
                         "title": "Data",
@@ -175,7 +175,7 @@
                 },
                 "type": "object",
                 "xml": {
-                    "name": "CategoryResource"
+                    "name": "RoleResource"
                 }
             }
         }

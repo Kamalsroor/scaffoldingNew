@@ -4,7 +4,7 @@ return [
     /*
      * The layout of dashboard.
      *
-     * Supported : "vali", "adminlte3"
+     * Supported : "vali", "adminlte3","Adminty"
      */
     'dashboard' => 'adminlte3',
 
